@@ -21,7 +21,7 @@ class HandGestures:
     labels = ["Back", "Down", "Forward", "Left", "Right", "Stop", "Up"]
 
     try:
-        sqliteConnection = sqlite3.connect(r'C:\Users\darwi\test 6\Assets\gestures.db')
+        sqliteConnection = sqlite3.connect(r'C:\Users\Maxwe\DroneProjectv2\Assets\gestures.db')
         cursor = sqliteConnection.cursor()
         count = cursor.execute("DELETE FROM Gestures")
         sqliteConnection.commit()
@@ -66,7 +66,7 @@ class HandGestures:
                     json_file.close()
                 print(labels[index])
                 try:
-                    sqliteConnection = sqlite3.connect(r'C:\Users\darwi\test 6\Assets\gestures.db')
+                    sqliteConnection = sqlite3.connect(r'C:\Users\Maxwe\DroneProjectv2\Assets\gestures.db')
                     cursor = sqliteConnection.cursor()
                     #print("Successfully Connected to SQLite")
 
@@ -92,7 +92,7 @@ class HandGestures:
                 prediction, index = classifier.getPrediction(imgWhite, draw=False)
                 print(labels[index])
                 try:
-                    sqliteConnection = sqlite3.connect(r'C:\Users\darwi\test 6\Assets\gestures.db')
+                    sqliteConnection = sqlite3.connect(r'C:\Users\Maxwe\DroneProjectv2\Assets\gestures.db')
                     cursor = sqliteConnection.cursor()
                     #print("Successfully Connected to SQLite")
 
